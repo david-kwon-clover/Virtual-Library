@@ -39,7 +39,7 @@ describe('Movie tests', () => {
       4.5
     )
     expect(movie1.summary()).toBe(
-      'Title: Inception, Director: Christopher Nolan, Year: 2010, Genre: Sci-Fi, Rating: 4.5'
+      'Title: Inception, Director: Christopher Nolan, Year: 2010, Genre: Sci-Fi, Duration: 148, Rating: 4.5'
     )
   })
 
