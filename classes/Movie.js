@@ -21,6 +21,17 @@ class Movie extends Media {
         const targetIndex = movieLengths.indexOf(Math.max(...movieLengths));
         return movies[targetIndex];
     }
+
+    static calculateAverageRating(movies) {
+        const movieRatings = movies.map((movie) => {
+            return movie.rating;
+        })
+        const totalRatings = movieRatings.reduce((total, movie) => {
+            total += movie;
+            return total;
+        }, 0);
+        return totalRatings / movies.length;
+    }
 }
 
 // don't change below

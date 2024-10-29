@@ -21,6 +21,17 @@ class Book extends Media {
         const targetIndex = ratings.indexOf(Math.max(...ratings));
         return books[targetIndex];
     }
+
+    static calculateAverageRating(books) {
+        const bookRatings = books.map((book) => {
+            return book.rating;
+        })
+        const totalRatings = bookRatings.reduce((total, book) => {
+            total += book;
+            return total;
+        }, 0);
+        return totalRatings / books.length;
+    }
 }
 
 // don't change below
